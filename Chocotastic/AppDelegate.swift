@@ -39,6 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // disable UINavigation bar transparent
       let navigationBarAppearance = UINavigationBarAppearance()
       navigationBarAppearance.configureWithDefaultBackground()
+      navigationBarAppearance.backgroundColor = .brown
+      navigationBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
       UINavigationBar.appearance().standardAppearance = navigationBarAppearance
       UINavigationBar.appearance().compactAppearance = navigationBarAppearance
       UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
