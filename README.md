@@ -5,6 +5,45 @@
 
 ## RxSwift: Making the Cart Count Reactive
 ### [RxSwift](https://github.com/YamamotoDesu/RxSwift-raywenderlich/compare/main...RxSwift)
+```swift
+func setupCartObserver() {
+    //1
+    ShoppingCart.sharedCart.chocolates.asObservable()
+      .subscribe(onNext: { //2
+        [unowned self] chocolates in
+        self.cartButton.title = "\(chocolates.count) 🍫"
+      })
+      .disposed(by: disposeBag) //3
+  }
+  
+  func setupCellConfiguration() {
+    //1
+    europeanChocolates
+      .bind(to: tableView
+        .rx //2
+        .items(cellIdentifier: ChocolateCell.Identifier,
+               cellType: ChocolateCell.self)) { //3
+                row, chocolate, cell in
+                cell.configureWithChocolate(chocolate: chocolate) //4
+      }
+      .disposed(by: disposeBag) //5
+  }
+  
+  func setupCellTapHandling() {
+    tableView
+      .rx
+      .modelSelected(Chocolate.self) //1
+      .subscribe(onNext: { [unowned self] chocolate in // 2
+        let newValue =  ShoppingCart.sharedCart.chocolates.value + [chocolate]
+        ShoppingCart.sharedCart.chocolates.accept(newValue) //3
+          
+        if let selectedRowIndexPath = self.tableView.indexPathForSelectedRow {
+          self.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
+        } //4
+      })
+      .disposed(by: disposeBag) //5
+  }
+```
 
 
 ## RxCocoa: Making the TableView Reactive
