@@ -9,3 +9,6 @@
 
 ## RxCocoa: Making the TableView Reactive
 ### [RxCocoa](https://github.com/YamamotoDesu/RxSwift-raywenderlich/compare/RxSwift...RxCocoa)
+
+## RxSwift: Direct Text Input
+### [RxSwift](https://github.com/YamamotoDesu/RxSwift-raywenderlich/compare/RxSwift...RxCocoa)
