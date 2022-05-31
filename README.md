@@ -11,4 +11,4 @@
 ### [RxCocoa](https://github.com/YamamotoDesu/RxSwift-raywenderlich/compare/RxSwift...RxCocoa)
 
 ## RxSwift: Direct Text Input
-### [RxSwift](https://github.com/YamamotoDesu/RxSwift-raywenderlich/compare/RxSwift...RxCocoa)
+### [RxSwift](https://github.com/YamamotoDesu/RxSwift-raywenderlich/compare/RxCocoa...RxSwift-Direct-Text-Input)
