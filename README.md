@@ -8,4 +8,4 @@
 
 
 ## RxCocoa: Making the TableView Reactive
-### [RxCocoa](https://github.com/YamamotoDesu/RxSwift-raywenderlich/compare/main...RxSwift)
+### [RxCocoa](https://github.com/YamamotoDesu/RxSwift-raywenderlich/compare/RxSwift...RxCocoa)
